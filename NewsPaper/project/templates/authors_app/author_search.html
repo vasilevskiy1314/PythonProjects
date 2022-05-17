@@ -1,0 +1,40 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+
+    <h1>Поиск новости</h1>
+    <h3>{{ time_now|date:'M-d-Y' }}</h3>
+    <hr>
+    <form method="GET">
+    {{ filter.form }}
+
+    <input type="submit" value="Найти">
+
+    </form>
+    {% if authors %}
+        <table>
+            <thead>
+                <th>
+                    Автор
+                </th>
+                <th>
+                    Рейтинг
+                </th>
+            </thead>
+                 {% for author in filter.qs %}
+                <tr>
+                    <td>
+                        <a href="{% url 'author_detail' author.id %}">{{ author.authorUser }}</a>
+                    </td>
+                    <td>
+                        {{ author.ratingAuthor}}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock content %}

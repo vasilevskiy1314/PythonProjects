@@ -1,0 +1,12 @@
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 302 0
+"GET /accounts/login/?next=/ HTTP/1.1" 200 6058
+"GET /static/css/styles.css HTTP/1.1" 304 0
+Not Found: /accounts/login/assets/favicon.ico
+"GET /accounts/login/assets/favicon.ico HTTP/1.1" 404 6572
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 4869
+Not Found: /assets/favicon.ico
+"GET /assets/favicon.ico HTTP/1.1" 404 3027
+"GET / HTTP/1.1" 200 4869
+C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.

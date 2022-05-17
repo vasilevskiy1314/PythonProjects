@@ -1,0 +1,33 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+    <h1>Все категории</h1>
+    <h3>{{ time_now|date:'M-d-Y' }}</h3>
+    <hr>
+    </form>
+        <table>
+            <thead>
+                <th>
+                    Категория
+                </th>
+                <th>
+                    Категория 2
+                </th>
+            </thead>
+                  {% for category in categorys %}
+                <tr>
+                    <td>
+                        <a href="{% url 'category_detail' category.id %}">{{ category.name }}</a>
+                    </td>
+                    <td>
+                        {{ category.name }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+<p>&nbsp;</p>
+{% endblock content %}

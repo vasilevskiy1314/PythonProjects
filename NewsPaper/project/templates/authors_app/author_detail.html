@@ -1,0 +1,28 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+<h1>{{ author.authorUser }}</h1>
+<hr>
+        <table>
+            <tr>
+               <th>
+                    Псевдоним
+                </th>
+                <th>
+                    Рейтинг
+                </th>
+            </tr>
+            <tr>
+                <td>
+                        {{ author.authorUser }}
+                    </td>
+                    <td>
+                        {{ author.ratingAuthor}}
+                    </td>
+            </tr>
+        </table>
+{% endblock content %}

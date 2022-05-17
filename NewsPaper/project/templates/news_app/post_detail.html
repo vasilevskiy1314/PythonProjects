@@ -1,0 +1,55 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+<h1>{{ post.title }}</h1>
+<h3>{{ post_time_creation }}</h3>
+<hr>
+        <table>
+            <tr>
+               <th>
+                    Категория
+                </th>
+                <th>
+                    Заголовок
+                </th>
+                <th>
+                    Текст
+                </th>
+                <th>
+                    Автор
+                </th>
+                <th>
+                    Рейтинг
+                </th>
+                <th>
+                    Дата выхода
+                </th>
+            </tr>
+            <tr>
+                    <td>
+                        {% for i in post.postCategory.all %}
+                        {{ i.name }}
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {{ post.title|censor }}
+                    </td>
+                    <td>
+                        {{ post.text|censor }}
+                    </td>
+                    <td>
+                        {{ post.author.authorUser }}
+                    </td>
+                    <td>
+                        {{ post.rating }}
+                    </td>
+                    <td>
+                        {{ post_time_creation }}
+                    </td>
+            </tr>
+        </table>
+{% endblock content %}

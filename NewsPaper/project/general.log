@@ -1,0 +1,59 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 4869
+C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 4869
+"GET /posts/categorys/ HTTP/1.1" 200 6209
+Not Found: /posts/categorys/assets/favicon.ico
+"GET /posts/categorys/assets/favicon.ico HTTP/1.1" 404 4864
+C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+INFO 2022-05-17 19:44:53,564 autoreload Watching for file changes with StatReloader
+INFO 2022-05-17 19:44:59,588 basehttp "GET / HTTP/1.1" 200 4869
+INFO 2022-05-17 19:45:01,534 basehttp "GET /authors/ HTTP/1.1" 200 5622
+WARNING 2022-05-17 19:45:01,575 log Not Found: /authors/assets/favicon.ico
+WARNING 2022-05-17 19:45:01,575 basehttp "GET /authors/assets/favicon.ico HTTP/1.1" 404 3851
+INFO 2022-05-17 19:56:29,451 autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+INFO 2022-05-17 19:58:32,691 autoreload Watching for file changes with StatReloader
+2022-05-17 20:01:10,940 INFO 2022-05-17 20:01:10,940 autoreload Watching for file changes with StatReloader
+2022-05-17 20:04:11,629 INFO 2022-05-17 20:04:11,629 autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-17 20:04:12,364 INFO 2022-05-17 20:04:12,364 autoreload Watching for file changes with StatReloader
+2022-05-17 20:05:24,431 INFO 2022-05-17 20:05:24,431 autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-17 20:05:24,994 INFO 2022-05-17 20:05:24,994 autoreload Watching for file changes with StatReloader
+2022-05-17 20:07:21,601 INFO 2022-05-17 20:07:21,601 autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-17 20:37:26,792 INFO autoreload Watching for file changes with StatReloader
+2022-05-17 20:38:07,874 INFO autoreload Watching for file changes with StatReloader
+2022-05-17 20:38:21,629 INFO basehttp "GET /sign/logout/ HTTP/1.1" 302 0
+2022-05-17 20:38:21,629 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-17 20:38:21,660 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6058
+2022-05-17 20:38:23,087 INFO basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+2022-05-17 20:38:23,097 INFO basehttp "GET / HTTP/1.1" 200 4869
+2022-05-17 20:38:25,446 INFO basehttp "GET /posts/ HTTP/1.1" 200 15022
+2022-05-17 20:38:25,522 WARNING log Not Found: /posts/assets/favicon.ico
+2022-05-17 20:38:25,523 WARNING basehttp "GET /posts/assets/favicon.ico HTTP/1.1" 404 4834
+2022-05-17 20:39:27,040 INFO basehttp "GET / HTTP/1.1" 200 4869
+2022-05-17 20:39:29,134 INFO basehttp "GET /sign/logout/ HTTP/1.1" 302 0
+2022-05-17 20:39:29,134 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-17 20:39:29,165 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6058
+2022-05-17 20:39:36,479 INFO autoreload Watching for file changes with StatReloader
+2022-05-17 20:39:46,808 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-17 20:39:46,855 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6058
+2022-05-17 20:39:50,206 INFO basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+2022-05-17 20:39:50,217 INFO basehttp "GET / HTTP/1.1" 200 4869
+2022-05-17 20:39:52,341 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6209
+2022-05-17 20:40:20,146 INFO autoreload C:\PythonProjects\NewsPaper\project\news\tasks.py changed, reloading.
+2022-05-17 20:40:20,896 INFO autoreload Watching for file changes with StatReloader
+2022-05-17 20:40:53,508 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6209
+2022-05-17 20:40:54,680 INFO basehttp "GET /authors/ HTTP/1.1" 200 5622
+2022-05-17 20:41:55,748 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+asctime levelname autoreload Watching for file changes with StatReloader
+asctime levelname autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-17 20:46:26,854 INFO autoreload Watching for file changes with StatReloader
+2022-05-17 20:49:13,194 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-17 20:49:13,724 INFO autoreload Watching for file changes with StatReloader
+2022-05-17 20:50:03,914 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-17 20:50:04,633 INFO autoreload Watching for file changes with StatReloader
+2022-05-17 20:51:05,268 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-17 20:53:02,502 INFO autoreload Watching for file changes with StatReloader

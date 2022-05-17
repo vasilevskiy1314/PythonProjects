@@ -1,0 +1,54 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% block title %} Product list {% endblock title %}
+
+{% block content %}
+<h1>Уверены, что хотите удалить эту новость?</h1>
+<table>
+    <tr>
+       <th>
+            Категория
+        </th>
+        <th>
+            Заголовок
+        </th>
+        <th>
+            Текст
+        </th>
+        <th>
+            Автор
+        </th>
+        <th>
+            Рейтинг
+        </th>
+        <th>
+            Дата выхода
+        </th>
+    </tr>
+    <tr>
+            <td>
+                {% for i in post.postCategory.all %}
+                {{ i.name }}
+                {% endfor %}
+            </td>
+            <td>
+                {{ post.title|censor }}
+            </td>
+            <td>
+                {{ post.text|censor }}
+            </td>
+            <td>
+                {{ post.author.authorUser }}
+            </td>
+            <td>
+                {{ post.rating }}
+            </td>
+            <td>
+                {{ post.dateCreation }}
+            </td>
+    </tr>
+</table>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="УДАЛИТЬ ЭТУ НОВОСТЬ"></form>
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% load cache %} <!-- Загружаем кэширование -->
+    {% cache 300 category_cache %} <!-- Кэшируем отдельный блок на 30 секунд -->
+
+        {% block title %}
+        News
+        {% endblock title %}
+
+        {% block content %}
+        <h1>{{ post.title }}</h1>
+        <h3>{{ post_time_creation }}</h3>
+        <hr>
+               <table>
+                    <thead>
+                        <th>
+                            Категория
+                        </th>
+                        <th>
+                            Новость
+                        </th>
+                    </thead>
+                        <tr>
+                            <td>
+                                {{ category.name }}
+                            </td>
+                            <td>
+                                {{ post.title }}
+                            </td>
+                        </tr>
+                </table>
+        <a href="{% url 'add_subscribe' category.id %}"><button>Подписаться на раздел {{ category.name }}!</button></a> <br>
+        <a href="{% url 'del_subscribe' category.id %}"><button>Отписаться от раздела {{ category.name }}!</button></a> <br>
+        {% endblock content %}
+    {% endcache %}

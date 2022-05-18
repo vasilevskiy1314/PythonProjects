@@ -9,6 +9,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import redirect
+import pytz
+from django.utils import timezone
 
 
 class AuthorsList(ListView):
@@ -24,10 +27,13 @@ class AuthorsList(ListView):
         context['filter'] = AuthorFilter(self.request.GET, queryset=self.get_queryset())
         context['value1'] = None
         context['form'] = AuthorForm()
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
 
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)  # создаём новую форму, забиваем в неё данные из POST-запроса
+        request.session['django_timezone'] = request.POST['timezone']
         if form.is_valid():  # если пользователь ввёл всё правильно и нигде не ошибся, то сохраняем новый пост
             form.save()
         return super().get(request, *args, **kwargs)
@@ -39,12 +45,28 @@ class AuthorDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)
 
 
 class AuthorUpdateView(LoginRequiredMixin, UpdateView):
     template_name = 'authors_app/author_update.html'
     form_class = AuthorForm
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
+        return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)
 
     def get_object(self, **kwargs):
         id = self.kwargs.get('pk')
@@ -56,6 +78,15 @@ class AuthorCreateView(CreateView):
     form_class = AuthorForm
     success_url = '/sign/upgrade_to_author/'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
+        return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)
 
 class AuthorSearch(ListView):
     model = Author
@@ -68,6 +99,12 @@ class AuthorSearch(ListView):
         context = super().get_context_data(**kwargs)
         context['time_now'] = datetime.now()
         context['filter'] = AuthorFilter(self.request.GET, queryset=self.get_queryset())
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)
 
 

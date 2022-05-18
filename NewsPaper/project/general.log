@@ -57,3 +57,1427 @@ asctime levelname autoreload C:\PythonProjects\NewsPaper\project\project\setting
 2022-05-17 20:50:04,633 INFO autoreload Watching for file changes with StatReloader
 2022-05-17 20:51:05,268 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
 2022-05-17 20:53:02,502 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 19:06:10,592 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 19:06:12,749 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-18 19:06:12,796 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6058
+2022-05-18 19:06:12,928 WARNING log Not Found: /accounts/login/assets/favicon.ico
+2022-05-18 19:06:12,928 WARNING basehttp "GET /accounts/login/assets/favicon.ico HTTP/1.1" 404 6572
+2022-05-18 19:13:24,607 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-18 19:13:24,632 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6058
+2022-05-18 19:13:36,205 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6058
+2022-05-18 19:13:36,285 INFO basehttp "GET /static/css/styles.css HTTP/1.1" 200 206521
+2022-05-18 19:13:36,355 WARNING log Not Found: /accounts/login/assets/favicon.ico
+2022-05-18 19:13:36,356 WARNING basehttp "GET /accounts/login/assets/favicon.ico HTTP/1.1" 404 6572
+2022-05-18 19:13:54,763 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-18 19:13:54,784 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6058
+2022-05-18 19:13:56,273 INFO basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+2022-05-18 19:13:56,283 INFO basehttp "GET / HTTP/1.1" 200 4869
+2022-05-18 19:13:56,311 WARNING log Not Found: /assets/favicon.ico
+2022-05-18 19:13:56,312 WARNING basehttp "GET /assets/favicon.ico HTTP/1.1" 404 3027
+2022-05-18 19:13:58,514 INFO basehttp "GET / HTTP/1.1" 200 4869
+2022-05-18 19:14:16,977 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6209
+2022-05-18 19:14:17,008 WARNING log Not Found: /posts/categorys/assets/favicon.ico
+2022-05-18 19:14:17,008 WARNING basehttp "GET /posts/categorys/assets/favicon.ico HTTP/1.1" 404 4864
+2022-05-18 19:14:17,430 INFO basehttp "GET /posts/ HTTP/1.1" 200 15022
+2022-05-18 19:14:17,477 WARNING log Not Found: /posts/assets/favicon.ico
+2022-05-18 19:14:17,477 WARNING basehttp "GET /posts/assets/favicon.ico HTTP/1.1" 404 4834
+2022-05-18 19:14:21,295 INFO basehttp "GET /posts/add/ HTTP/1.1" 200 5980
+2022-05-18 19:14:21,328 WARNING log Not Found: /posts/add/assets/favicon.ico
+2022-05-18 19:14:21,329 WARNING basehttp "GET /posts/add/assets/favicon.ico HTTP/1.1" 404 4846
+2022-05-18 19:14:25,314 INFO basehttp "GET /posts/ HTTP/1.1" 200 15022
+2022-05-18 19:14:32,472 INFO basehttp "GET /posts/add/ HTTP/1.1" 200 5980
+2022-05-18 19:16:23,627 INFO basehttp "GET /posts/ HTTP/1.1" 200 15030
+2022-05-18 19:16:41,166 ERROR log Internal Server Error: /posts/add/
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 614, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 615, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 680, in _connect
+    raise err
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 668, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 119, in reconnect_on_error
+    yield
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\client.py", line 1581, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\client.py", line 1422, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 1392, in get_connection
+    connection.connect()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 620, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 614, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 615, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 680, in _connect
+    raise err
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 668, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\kombu\connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\app\base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 168, in _consume_from
+    with self.reconnect_on_error():
+  File "C:\Python\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 376, in ensure
+    return retry_over_time(
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\commands\core.py", line 1873, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\client.py", line 1224, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 1392, in get_connection
+    connection.connect()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 620, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\PythonProjects\NewsPaper\project\news\views.py", line 124, in post
+    new_post_sub_email.apply_async([sub_categoryname.pk], countdown=1)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\app\base.py", line 785, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "C:\Python\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\kombu\connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+2022-05-18 19:16:41,182 INFO basehttp - Broken pipe from ('127.0.0.1', 54713)
+
+2022-05-18 19:24:58,005 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 19:25:02,397 INFO basehttp "GET /posts/ HTTP/1.1" 200 15040
+2022-05-18 19:25:03,975 INFO basehttp "GET /posts/ HTTP/1.1" 200 15040
+2022-05-18 19:25:04,647 INFO basehttp "GET /posts/ HTTP/1.1" 200 15040
+2022-05-18 19:25:05,243 INFO basehttp "GET /posts/ HTTP/1.1" 200 15040
+2022-05-18 19:25:05,757 INFO basehttp "GET /posts/ HTTP/1.1" 200 15040
+2022-05-18 19:25:06,242 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6209
+2022-05-18 19:25:06,879 INFO basehttp "GET /posts/ HTTP/1.1" 200 15040
+2022-05-18 19:26:29,886 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-18 19:26:30,606 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 19:26:37,120 ERROR basehttp "GET /posts/ HTTP/1.1" 500 59
+2022-05-18 19:26:37,149 WARNING log Not Found: /favicon.ico
+2022-05-18 19:26:37,150 WARNING basehttp "GET /favicon.ico HTTP/1.1" 404 3006
+2022-05-18 19:26:42,388 ERROR basehttp "GET /posts/ HTTP/1.1" 500 59
+2022-05-18 19:27:17,145 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-18 19:27:34,452 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 19:27:38,030 INFO basehttp "GET / HTTP/1.1" 200 4869
+2022-05-18 19:27:41,311 ERROR basehttp "GET /posts/ HTTP/1.1" 500 59
+2022-05-18 19:27:55,947 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-18 19:27:56,760 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 19:27:59,448 INFO basehttp "GET / HTTP/1.1" 200 4869
+2022-05-18 19:28:00,588 INFO basehttp "GET /posts/ HTTP/1.1" 200 15040
+2022-05-18 19:28:08,942 INFO basehttp "GET /posts/add/ HTTP/1.1" 200 5980
+2022-05-18 19:28:19,574 INFO basehttp "GET /posts/ HTTP/1.1" 200 15044
+2022-05-18 19:28:23,407 INFO basehttp "GET /posts/365/delete/ HTTP/1.1" 200 5616
+2022-05-18 19:28:23,434 WARNING log Not Found: /posts/365/delete/assets/favicon.ico
+2022-05-18 19:28:23,434 WARNING basehttp "GET /posts/365/delete/assets/favicon.ico HTTP/1.1" 404 4867
+2022-05-18 19:28:24,814 INFO basehttp "POST /posts/365/delete/ HTTP/1.1" 302 0
+2022-05-18 19:28:24,850 INFO basehttp "GET /posts/ HTTP/1.1" 200 15040
+2022-05-18 19:28:26,371 INFO basehttp "GET /posts/ HTTP/1.1" 200 15040
+2022-05-18 19:28:28,176 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6209
+2022-05-18 19:28:28,615 INFO basehttp "GET /posts/ HTTP/1.1" 200 15040
+2022-05-18 19:30:05,786 ERROR log Internal Server Error: /posts/add/
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 614, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 615, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 680, in _connect
+    raise err
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 668, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 119, in reconnect_on_error
+    yield
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\client.py", line 1581, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\client.py", line 1422, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 1392, in get_connection
+    connection.connect()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 620, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 614, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 615, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 680, in _connect
+    raise err
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 668, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\kombu\connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\app\base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 168, in _consume_from
+    with self.reconnect_on_error():
+  File "C:\Python\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 376, in ensure
+    return retry_over_time(
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\backends\redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\commands\core.py", line 1873, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\client.py", line 1224, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 1392, in get_connection
+    connection.connect()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\redis\connection.py", line 620, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\contrib\auth\mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\PythonProjects\NewsPaper\project\news\views.py", line 124, in post
+    new_post_sub_email.apply_async([sub_categoryname.pk], countdown=1)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\celery\app\base.py", line 785, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "C:\Python\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\kombu\connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+2022-05-18 19:30:05,825 INFO basehttp - Broken pipe from ('127.0.0.1', 54885)
+
+2022-05-18 19:35:00,877 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-18 19:35:01,643 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 19:48:47,103 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 19:48:50,957 INFO basehttp "GET / HTTP/1.1" 200 5468
+2022-05-18 19:50:47,200 INFO basehttp "GET /posts/ HTTP/1.1" 200 66977
+2022-05-18 19:50:48,752 ERROR log Internal Server Error: /posts/categorys/
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': None, 'page_obj': None, 'is_paginated': False, 'object_list': <MultilingualQuerySet [<Category: Игры>, <Category: Наука>, <Category: Политика>, <Category: Спорт>, <Category: Финансы>]>, 'categorys': <MultilingualQuerySet [<Category: Игры>, <Category: Наука>, <Category: Политика>, <Category: Спорт>, <Category: Финансы>]>, 'view': <news.views.CategorysList object at 0x00000201ED621E70>, 'time_now': datetime.datetime(2022, 5, 18, 19, 50, 48, 691691)}]
+2022-05-18 19:50:48,764 ERROR basehttp "GET /posts/categorys/ HTTP/1.1" 500 175924
+2022-05-18 19:51:04,411 INFO basehttp "GET / HTTP/1.1" 200 5468
+2022-05-18 19:51:06,075 ERROR log Internal Server Error: /authors/
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': <django.core.paginator.Paginator object at 0x00000201ED5D1870>, 'page_obj': <Page 1 of 1>, 'is_paginated': False, 'object_list': <QuerySet [<Author: admin>, <Author: reebox1314>]>, 'authors': <QuerySet [<Author: admin>, <Author: reebox1314>]>, 'view': <authors.views.AuthorsList object at 0x00000201ED5D1AB0>, 'time_now': datetime.datetime(2022, 5, 18, 19, 51, 5, 958207), 'filter': <authors.filters.AuthorFilter object at 0x00000201ED5D1A50>, 'value1': None, 'form': <AuthorForm bound=False, valid=Unknown, fields=(descriptionAuthor;nameAuthor;authorUser;check_box)>}]
+2022-05-18 19:51:06,090 ERROR basehttp "GET /authors/ HTTP/1.1" 500 178355
+2022-05-18 19:51:07,368 ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'view': <protect.views.IndexView object at 0x00000201ED76A920>, 'is_not_author': False}]
+2022-05-18 19:51:07,377 ERROR basehttp "GET / HTTP/1.1" 500 181317
+2022-05-18 19:51:08,817 ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'view': <protect.views.IndexView object at 0x00000201ED5D37C0>, 'is_not_author': False}]
+2022-05-18 19:51:08,825 ERROR basehttp "GET / HTTP/1.1" 500 181317
+2022-05-18 19:51:09,595 INFO basehttp "GET / HTTP/1.1" 200 5468
+2022-05-18 19:51:10,429 ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'view': <protect.views.IndexView object at 0x00000201ED768250>, 'is_not_author': False}]
+2022-05-18 19:51:10,439 ERROR basehttp "GET / HTTP/1.1" 500 181317
+2022-05-18 19:51:17,580 INFO basehttp "GET / HTTP/1.1" 200 5468
+2022-05-18 19:51:19,326 ERROR log Internal Server Error: /posts/categorys/
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': None, 'page_obj': None, 'is_paginated': False, 'object_list': <MultilingualQuerySet [<Category: Игры>, <Category: Наука>, <Category: Политика>, <Category: Спорт>, <Category: Финансы>]>, 'categorys': <MultilingualQuerySet [<Category: Игры>, <Category: Наука>, <Category: Политика>, <Category: Спорт>, <Category: Финансы>]>, 'view': <news.views.CategorysList object at 0x00000201ED76A350>, 'time_now': datetime.datetime(2022, 5, 18, 19, 51, 19, 271130)}]
+2022-05-18 19:51:19,338 ERROR basehttp "GET /posts/categorys/ HTTP/1.1" 500 175918
+2022-05-18 19:51:20,409 ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'view': <protect.views.IndexView object at 0x00000201ED473760>, 'is_not_author': False}]
+2022-05-18 19:51:20,418 ERROR basehttp "GET / HTTP/1.1" 500 181317
+2022-05-18 19:51:21,456 ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'view': <protect.views.IndexView object at 0x00000201ED57BEB0>, 'is_not_author': False}]
+2022-05-18 19:51:21,466 ERROR basehttp "GET / HTTP/1.1" 500 181317
+2022-05-18 19:51:22,143 ERROR log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'view': <protect.views.IndexView object at 0x00000201ED849780>, 'is_not_author': False}]
+2022-05-18 19:51:22,152 ERROR basehttp "GET / HTTP/1.1" 500 181317
+2022-05-18 19:51:22,809 INFO basehttp "GET / HTTP/1.1" 200 5468
+2022-05-18 19:51:24,131 ERROR log Internal Server Error: /posts/
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'models': <module 'django.db.models' from 'C:\\PythonProjects\\NewsPaper\\venv\\lib\\site-packages\\django\\db\\models\\__init__.py'>, 'current_time': datetime.datetime(2022, 5, 18, 16, 51, 24, 92448, tzinfo=datetime.timezone.utc), 'timezones': ['Africa/Abidjan', 'Africa/Accra', 'Africa/Addis_Ababa', 'Africa/Algiers', 'Africa/Asmara', 'Africa/Bamako', 'Africa/Bangui', 'Africa/Banjul', 'Africa/Bissau', 'Africa/Blantyre', 'Africa/Brazzaville', 'Africa/Bujumbura', 'Africa/Cairo', 'Africa/Casablanca', 'Africa/Ceuta', 'Africa/Conakry', 'Africa/Dakar', 'Africa/Dar_es_Salaam', 'Africa/Djibouti', 'Africa/Douala', 'Africa/El_Aaiun', 'Africa/Freetown', 'Africa/Gaborone', 'Africa/Harare', 'Africa/Johannesburg', 'Africa/Juba', 'Africa/Kampala', 'Africa/Khartoum', 'Africa/Kigali', 'Africa/Kinshasa', 'Africa/Lagos', 'Africa/Libreville', 'Africa/Lome', 'Africa/Luanda', 'Africa/Lubumbashi', 'Africa/Lusaka', 'Africa/Malabo', 'Africa/Maputo', 'Africa/Maseru', 'Africa/Mbabane', 'Africa/Mogadishu', 'Africa/Monrovia', 'Africa/Nairobi', 'Africa/Ndjamena', 'Africa/Niamey', 'Africa/Nouakchott', 'Africa/Ouagadougou', 'Africa/Porto-Novo', 'Africa/Sao_Tome', 'Africa/Tripoli', 'Africa/Tunis', 'Africa/Windhoek', 'America/Adak', 'America/Anchorage', 'America/Anguilla', 'America/Antigua', 'America/Araguaina', 'America/Argentina/Buenos_Aires', 'America/Argentina/Catamarca', 'America/Argentina/Cordoba', 'America/Argentina/Jujuy', 'America/Argentina/La_Rioja', 'America/Argentina/Mendoza', 'America/Argentina/Rio_Gallegos', 'America/Argentina/Salta', 'America/Argentina/San_Juan', 'America/Argentina/San_Luis', 'America/Argentina/Tucuman', 'America/Argentina/Ushuaia', 'America/Aruba', 'America/Asuncion', 'America/Atikokan', 'America/Bahia', 'America/Bahia_Banderas', 'America/Barbados', 'America/Belem', 'America/Belize', 'America/Blanc-Sablon', 'America/Boa_Vista', 'America/Bogota', 'America/Boise', 'America/Cambridge_Bay', 'America/Campo_Grande', 'America/Cancun', 'America/Caracas', 'America/Cayenne', 'America/Cayman', 'America/Chicago', 'America/Chihuahua', 'America/Costa_Rica', 'America/Creston', 'America/Cuiaba', 'America/Curacao', 'America/Danmarkshavn', 'America/Dawson', 'America/Dawson_Creek', 'America/Denver', 'America/Detroit', 'America/Dominica', 'America/Edmonton', 'America/Eirunepe', 'America/El_Salvador', 'America/Fort_Nelson', 'America/Fortaleza', 'America/Glace_Bay', 'America/Goose_Bay', 'America/Grand_Turk', 'America/Grenada', 'America/Guadeloupe', 'America/Guatemala', 'America/Guayaquil', 'America/Guyana', 'America/Halifax', 'America/Havana', 'America/Hermosillo', 'America/Indiana/Indianapolis', 'America/Indiana/Knox', 'America/Indiana/Marengo', 'America/Indiana/Petersburg', 'America/Indiana/Tell_City', 'America/Indiana/Vevay', 'America/Indiana/Vincennes', 'America/Indiana/Winamac', 'America/Inuvik', 'America/Iqaluit', 'America/Jamaica', 'America/Juneau', 'America/Kentucky/Louisville', 'America/Kentucky/Monticello', 'America/Kralendijk', 'America/La_Paz', 'America/Lima', 'America/Los_Angeles', 'America/Lower_Princes', 'America/Maceio', 'America/Managua', 'America/Manaus', 'America/Marigot', 'America/Martinique', 'America/Matamoros', 'America/Mazatlan', 'America/Menominee', 'America/Merida', 'America/Metlakatla', 'America/Mexico_City', 'America/Miquelon', 'America/Moncton', 'America/Monterrey', 'America/Montevideo', 'America/Montserrat', 'America/Nassau', 'America/New_York', 'America/Nipigon', 'America/Nome', 'America/Noronha', 'America/North_Dakota/Beulah', 'America/North_Dakota/Center', 'America/North_Dakota/New_Salem', 'America/Nuuk', 'America/Ojinaga', 'America/Panama', 'America/Pangnirtung', 'America/Paramaribo', 'America/Phoenix', 'America/Port-au-Prince', 'America/Port_of_Spain', 'America/Porto_Velho', 'America/Puerto_Rico', 'America/Punta_Arenas', 'America/Rainy_River', 'America/Rankin_Inlet', 'America/Recife', 'America/Regina', 'America/Resolute', 'America/Rio_Branco', 'America/Santarem', 'America/Santiago', 'America/Santo_Domingo', 'America/Sao_Paulo', 'America/Scoresbysund', 'America/Sitka', 'America/St_Barthelemy', 'America/St_Johns', 'America/St_Kitts', 'America/St_Lucia', 'America/St_Thomas', 'America/St_Vincent', 'America/Swift_Current', 'America/Tegucigalpa', 'America/Thule', 'America/Thunder_Bay', 'America/Tijuana', 'America/Toronto', 'America/Tortola', 'America/Vancouver', 'America/Whitehorse', 'America/Winnipeg', 'America/Yakutat', 'America/Yellowknife', 'Antarctica/Casey', 'Antarctica/Davis', 'Antarctica/DumontDUrville', 'Antarctica/Macquarie', 'Antarctica/Mawson', 'Antarctica/McMurdo', 'Antarctica/Palmer', 'Antarctica/Rothera', 'Antarctica/Syowa', 'Antarctica/Troll', 'Antarctica/Vostok', 'Arctic/Longyearbyen', 'Asia/Aden', 'Asia/Almaty', 'Asia/Amman', 'Asia/Anadyr', 'Asia/Aqtau', 'Asia/Aqtobe', 'Asia/Ashgabat', 'Asia/Atyrau', 'Asia/Baghdad', 'Asia/Bahrain', 'Asia/Baku', 'Asia/Bangkok', 'Asia/Barnaul', 'Asia/Beirut', 'Asia/Bishkek', 'Asia/Brunei', 'Asia/Chita', 'Asia/Choibalsan', 'Asia/Colombo', 'Asia/Damascus', 'Asia/Dhaka', 'Asia/Dili', 'Asia/Dubai', 'Asia/Dushanbe', 'Asia/Famagusta', 'Asia/Gaza', 'Asia/Hebron', 'Asia/Ho_Chi_Minh', 'Asia/Hong_Kong', 'Asia/Hovd', 'Asia/Irkutsk', 'Asia/Jakarta', 'Asia/Jayapura', 'Asia/Jerusalem', 'Asia/Kabul', 'Asia/Kamchatka', 'Asia/Karachi', 'Asia/Kathmandu', 'Asia/Khandyga', 'Asia/Kolkata', 'Asia/Krasnoyarsk', 'Asia/Kuala_Lumpur', 'Asia/Kuching', 'Asia/Kuwait', 'Asia/Macau', 'Asia/Magadan', 'Asia/Makassar', 'Asia/Manila', 'Asia/Muscat', 'Asia/Nicosia', 'Asia/Novokuznetsk', 'Asia/Novosibirsk', 'Asia/Omsk', 'Asia/Oral', 'Asia/Phnom_Penh', 'Asia/Pontianak', 'Asia/Pyongyang', 'Asia/Qatar', 'Asia/Qostanay', 'Asia/Qyzylorda', 'Asia/Riyadh', 'Asia/Sakhalin', 'Asia/Samarkand', 'Asia/Seoul', 'Asia/Shanghai', 'Asia/Singapore', 'Asia/Srednekolymsk', 'Asia/Taipei', 'Asia/Tashkent', 'Asia/Tbilisi', 'Asia/Tehran', 'Asia/Thimphu', 'Asia/Tokyo', 'Asia/Tomsk', 'Asia/Ulaanbaatar', 'Asia/Urumqi', 'Asia/Ust-Nera', 'Asia/Vientiane', 'Asia/Vladivostok', 'Asia/Yakutsk', 'Asia/Yangon', 'Asia/Yekaterinburg', 'Asia/Yerevan', 'Atlantic/Azores', 'Atlantic/Bermuda', 'Atlantic/Canary', 'Atlantic/Cape_Verde', 'Atlantic/Faroe', 'Atlantic/Madeira', 'Atlantic/Reykjavik', 'Atlantic/South_Georgia', 'Atlantic/St_Helena', 'Atlantic/Stanley', 'Australia/Adelaide', 'Australia/Brisbane', 'Australia/Broken_Hill', 'Australia/Darwin', 'Australia/Eucla', 'Australia/Hobart', 'Australia/Lindeman', 'Australia/Lord_Howe', 'Australia/Melbourne', 'Australia/Perth', 'Australia/Sydney', 'Canada/Atlantic', 'Canada/Central', 'Canada/Eastern', 'Canada/Mountain', 'Canada/Newfoundland', 'Canada/Pacific', 'Europe/Amsterdam', 'Europe/Andorra', 'Europe/Astrakhan', 'Europe/Athens', 'Europe/Belgrade', 'Europe/Berlin', 'Europe/Bratislava', 'Europe/Brussels', 'Europe/Bucharest', 'Europe/Budapest', 'Europe/Busingen', 'Europe/Chisinau', 'Europe/Copenhagen', 'Europe/Dublin', 'Europe/Gibraltar', 'Europe/Guernsey', 'Europe/Helsinki', 'Europe/Isle_of_Man', 'Europe/Istanbul', 'Europe/Jersey', 'Europe/Kaliningrad', 'Europe/Kiev', 'Europe/Kirov', 'Europe/Lisbon', 'Europe/Ljubljana', 'Europe/London', 'Europe/Luxembourg', 'Europe/Madrid', 'Europe/Malta', 'Europe/Mariehamn', 'Europe/Minsk', 'Europe/Monaco', 'Europe/Moscow', 'Europe/Oslo', 'Europe/Paris', 'Europe/Podgorica', 'Europe/Prague', 'Europe/Riga', 'Europe/Rome', 'Europe/Samara', 'Europe/San_Marino', 'Europe/Sarajevo', 'Europe/Saratov', 'Europe/Simferopol', 'Europe/Skopje', 'Europe/Sofia', 'Europe/Stockholm', 'Europe/Tallinn', 'Europe/Tirane', 'Europe/Ulyanovsk', 'Europe/Uzhgorod', 'Europe/Vaduz', 'Europe/Vatican', 'Europe/Vienna', 'Europe/Vilnius', 'Europe/Volgograd', 'Europe/Warsaw', 'Europe/Zagreb', 'Europe/Zaporozhye', 'Europe/Zurich', 'GMT', 'Indian/Antananarivo', 'Indian/Chagos', 'Indian/Christmas', 'Indian/Cocos', 'Indian/Comoro', 'Indian/Kerguelen', 'Indian/Mahe', 'Indian/Maldives', 'Indian/Mauritius', 'Indian/Mayotte', 'Indian/Reunion', 'Pacific/Apia', 'Pacific/Auckland', 'Pacific/Bougainville', 'Pacific/Chatham', 'Pacific/Chuuk', 'Pacific/Easter', 'Pacific/Efate', 'Pacific/Fakaofo', 'Pacific/Fiji', 'Pacific/Funafuti', 'Pacific/Galapagos', 'Pacific/Gambier', 'Pacific/Guadalcanal', 'Pacific/Guam', 'Pacific/Honolulu', 'Pacific/Kanton', 'Pacific/Kiritimati', 'Pacific/Kosrae', 'Pacific/Kwajalein', 'Pacific/Majuro', 'Pacific/Marquesas', 'Pacific/Midway', 'Pacific/Nauru', 'Pacific/Niue', 'Pacific/Norfolk', 'Pacific/Noumea', 'Pacific/Pago_Pago', 'Pacific/Palau', 'Pacific/Pitcairn', 'Pacific/Pohnpei', 'Pacific/Port_Moresby', 'Pacific/Rarotonga', 'Pacific/Saipan', 'Pacific/Tahiti', 'Pacific/Tarawa', 'Pacific/Tongatapu', 'Pacific/Wake', 'Pacific/Wallis', 'US/Alaska', 'US/Arizona', 'US/Central', 'US/Eastern', 'US/Hawaii', 'US/Mountain', 'US/Pacific', 'UTC']}]
+2022-05-18 19:51:24,153 ERROR basehttp "GET /posts/ HTTP/1.1" 500 344639
+2022-05-18 19:51:50,680 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 19:51:51,962 INFO basehttp "GET / HTTP/1.1" 200 5468
+2022-05-18 19:51:58,081 INFO basehttp "GET /posts/ HTTP/1.1" 200 66977
+2022-05-18 19:52:15,619 WARNING base Method Not Allowed (POST): /posts/
+2022-05-18 19:52:15,620 WARNING log Method Not Allowed: /posts/
+2022-05-18 19:52:15,621 WARNING basehttp "POST /posts/ HTTP/1.1" 405 0
+2022-05-18 19:52:27,953 WARNING base Method Not Allowed (POST): /posts/
+2022-05-18 19:52:27,954 WARNING log Method Not Allowed: /posts/
+2022-05-18 19:52:27,954 WARNING basehttp "POST /posts/ HTTP/1.1" 405 0
+2022-05-18 19:52:30,096 INFO basehttp "GET / HTTP/1.1" 200 5468
+2022-05-18 19:52:31,442 ERROR log Internal Server Error: /posts/categorys/
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'TIME_ZONE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 733, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 842, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\PythonProjects\NewsPaper\venv\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in [{'True': True, 'False': False, 'None': None}, {}, {}, {'paginator': None, 'page_obj': None, 'is_paginated': False, 'object_list': <MultilingualQuerySet [<Category: Игры>, <Category: Наука>, <Category: Политика>, <Category: Спорт>, <Category: Финансы>]>, 'categorys': <MultilingualQuerySet [<Category: Игры>, <Category: Наука>, <Category: Политика>, <Category: Спорт>, <Category: Финансы>]>, 'view': <news.views.CategorysList object at 0x0000016A9620F610>, 'time_now': datetime.datetime(2022, 5, 18, 19, 52, 31, 388117)}]
+2022-05-18 19:52:31,454 ERROR basehttp "GET /posts/categorys/ HTTP/1.1" 500 175918
+2022-05-18 19:54:13,960 INFO basehttp "GET / HTTP/1.1" 200 5522
+2022-05-18 19:54:20,087 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6862
+2022-05-18 19:54:21,158 INFO basehttp "GET /authors/ HTTP/1.1" 200 6275
+2022-05-18 19:54:21,189 WARNING log Not Found: /authors/assets/favicon.ico
+2022-05-18 19:54:21,189 WARNING basehttp "GET /authors/assets/favicon.ico HTTP/1.1" 404 3851
+2022-05-18 19:54:22,125 INFO basehttp "GET /contacts/ HTTP/1.1" 200 5225
+2022-05-18 19:54:22,151 WARNING log Not Found: /contacts/assets/favicon.ico
+2022-05-18 19:54:22,152 WARNING basehttp "GET /contacts/assets/favicon.ico HTTP/1.1" 404 3238
+2022-05-18 19:54:23,771 INFO basehttp "POST /contacts/ HTTP/1.1" 200 5225
+2022-05-18 19:54:25,269 INFO basehttp "GET /about/ HTTP/1.1" 200 5246
+2022-05-18 19:54:25,290 WARNING log Not Found: /about/assets/favicon.ico
+2022-05-18 19:54:25,290 WARNING basehttp "GET /about/assets/favicon.ico HTTP/1.1" 404 3045
+2022-05-18 19:54:26,051 INFO basehttp "GET /contacts/ HTTP/1.1" 200 5225
+2022-05-18 19:54:27,039 INFO basehttp "GET /posts/search/ HTTP/1.1" 200 31854
+2022-05-18 19:54:27,074 WARNING log Not Found: /posts/search/assets/favicon.ico
+2022-05-18 19:54:27,074 WARNING basehttp "GET /posts/search/assets/favicon.ico HTTP/1.1" 404 4855
+2022-05-18 19:54:27,749 INFO basehttp "GET /authors/ HTTP/1.1" 200 6275
+2022-05-18 19:54:28,317 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6862
+2022-05-18 19:54:28,848 INFO basehttp "GET /posts/ HTTP/1.1" 200 6116
+2022-05-18 19:54:29,573 INFO basehttp "GET / HTTP/1.1" 200 5522
+2022-05-18 19:54:30,321 INFO basehttp "GET /posts/ HTTP/1.1" 200 67031
+2022-05-18 19:54:30,889 INFO basehttp "GET / HTTP/1.1" 200 66437
+2022-05-18 19:54:31,682 INFO basehttp "GET /posts/ HTTP/1.1" 200 67031
+2022-05-18 19:54:32,545 INFO basehttp "GET /authors/ HTTP/1.1" 200 67190
+2022-05-18 19:54:32,996 INFO basehttp "GET /about/ HTTP/1.1" 200 66161
+2022-05-18 19:54:33,446 INFO basehttp "GET /contacts/ HTTP/1.1" 200 66140
+2022-05-18 19:54:33,919 INFO basehttp "GET /posts/search/ HTTP/1.1" 200 92769
+2022-05-18 19:54:34,693 INFO basehttp "GET /about/ HTTP/1.1" 200 66161
+2022-05-18 19:54:35,187 INFO basehttp "GET /authors/ HTTP/1.1" 200 67190
+2022-05-18 19:54:35,827 INFO basehttp "GET /posts/ HTTP/1.1" 200 67031
+2022-05-18 19:54:45,553 INFO basehttp "GET /posts/ HTTP/1.1" 200 67031
+2022-05-18 19:54:47,000 INFO basehttp "GET /posts/ HTTP/1.1" 200 67031
+2022-05-18 19:54:48,020 INFO basehttp "GET /posts/ HTTP/1.1" 200 67031
+2022-05-18 19:54:48,726 INFO basehttp "GET /posts/ HTTP/1.1" 200 67031
+2022-05-18 19:54:51,221 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6862
+2022-05-18 19:54:51,868 INFO basehttp "GET /posts/ HTTP/1.1" 200 6116
+2022-05-18 19:54:56,372 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6862
+2022-05-18 19:54:57,292 INFO basehttp "GET /posts/ HTTP/1.1" 200 6116
+2022-05-18 19:55:19,227 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6862
+2022-05-18 19:55:21,586 INFO basehttp "GET /posts/ HTTP/1.1" 200 6116
+2022-05-18 19:55:39,447 INFO basehttp "GET /about/ HTTP/1.1" 200 5177
+2022-05-18 19:55:40,634 INFO basehttp "GET /authors/ HTTP/1.1" 200 6206
+2022-05-18 19:55:41,901 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6793
+2022-05-18 19:55:42,651 INFO basehttp "GET /posts/ HTTP/1.1" 200 6047
+2022-05-18 19:55:46,652 INFO basehttp "GET /admin/ HTTP/1.1" 200 14465
+2022-05-18 19:55:46,676 INFO basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2022-05-18 19:55:46,676 INFO basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2022-05-18 19:55:46,677 INFO basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2022-05-18 19:55:46,681 INFO basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2022-05-18 19:55:46,681 INFO basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2022-05-18 19:55:46,683 INFO basehttp "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2022-05-18 19:55:46,690 INFO basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+2022-05-18 19:55:46,690 INFO basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2022-05-18 19:55:46,690 INFO basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2022-05-18 19:55:46,727 INFO basehttp "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2022-05-18 19:55:46,730 INFO basehttp "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2022-05-18 19:55:46,731 INFO basehttp "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2022-05-18 19:55:46,732 INFO basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+2022-05-18 19:55:49,258 INFO basehttp "GET /admin/news/post/ HTTP/1.1" 200 31671
+2022-05-18 19:55:49,268 INFO basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2022-05-18 19:55:49,276 INFO basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2022-05-18 19:55:49,277 INFO basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2022-05-18 19:55:49,280 INFO basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2022-05-18 19:55:49,284 INFO basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2022-05-18 19:55:49,286 INFO basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2022-05-18 19:55:49,287 INFO basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2022-05-18 19:55:49,287 INFO basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2022-05-18 19:55:49,288 INFO basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2022-05-18 19:55:49,290 INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 15618
+2022-05-18 19:55:49,293 INFO basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+2022-05-18 19:55:49,318 INFO basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2022-05-18 19:55:52,035 INFO basehttp "GET /admin/news/post/364/change/ HTTP/1.1" 200 15711
+2022-05-18 19:55:52,048 INFO basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2022-05-18 19:55:52,054 INFO basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2022-05-18 19:55:52,054 INFO basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2022-05-18 19:55:52,054 INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 15618
+2022-05-18 19:55:52,058 INFO basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2022-05-18 19:55:52,091 INFO basehttp "GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 200 280
+2022-05-18 19:56:02,922 INFO basehttp "POST /admin/news/post/364/change/ HTTP/1.1" 302 0
+2022-05-18 19:56:03,033 INFO basehttp "GET /admin/news/post/ HTTP/1.1" 200 31885
+2022-05-18 19:56:03,049 INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 15618
+2022-05-18 19:56:14,087 INFO basehttp "GET /posts/ HTTP/1.1" 200 66938
+2022-05-18 19:56:15,340 INFO basehttp "GET /posts/ HTTP/1.1" 200 66938
+2022-05-18 19:56:19,190 INFO basehttp "GET /about/ HTTP/1.1" 200 5177
+2022-05-18 19:56:19,828 INFO basehttp "GET /contacts/ HTTP/1.1" 200 5156
+2022-05-18 19:56:20,293 INFO basehttp "GET /authors/ HTTP/1.1" 200 6206
+2022-05-18 19:56:20,745 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6793
+2022-05-18 19:56:21,226 INFO basehttp "GET /posts/ HTTP/1.1" 200 6047
+2022-05-18 19:56:22,393 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6793
+2022-05-18 19:56:22,770 INFO basehttp "GET /posts/ HTTP/1.1" 200 6047
+2022-05-18 19:56:23,352 INFO basehttp "GET /posts/ HTTP/1.1" 200 6047
+2022-05-18 19:56:23,979 INFO basehttp "GET /about/ HTTP/1.1" 200 5177
+2022-05-18 19:56:24,261 INFO basehttp "GET /contacts/ HTTP/1.1" 200 5156
+2022-05-18 19:56:24,733 INFO basehttp "GET /posts/search/ HTTP/1.1" 200 31785
+2022-05-18 19:56:25,274 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6793
+2022-05-18 19:56:25,687 INFO basehttp "GET /posts/ HTTP/1.1" 200 6047
+2022-05-18 19:59:42,436 INFO basehttp "GET /posts/ HTTP/1.1" 200 56303
+2022-05-18 20:00:33,545 INFO basehttp "GET /posts/ HTTP/1.1" 200 56269
+2022-05-18 20:00:48,834 WARNING base Method Not Allowed (POST): /posts/
+2022-05-18 20:00:48,835 WARNING log Method Not Allowed: /posts/
+2022-05-18 20:00:48,836 WARNING basehttp "POST /posts/ HTTP/1.1" 405 0
+2022-05-18 20:00:53,379 WARNING base Method Not Allowed (POST): /posts/
+2022-05-18 20:00:53,380 WARNING log Method Not Allowed: /posts/
+2022-05-18 20:00:53,381 WARNING basehttp "POST /posts/ HTTP/1.1" 405 0
+2022-05-18 20:02:17,997 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-18 20:02:18,794 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:02:24,126 WARNING base Method Not Allowed (POST): /posts/
+2022-05-18 20:02:24,127 WARNING log Method Not Allowed: /posts/
+2022-05-18 20:02:24,127 WARNING basehttp "POST /posts/ HTTP/1.1" 405 0
+2022-05-18 20:02:25,435 INFO basehttp "GET / HTTP/1.1" 200 5296
+2022-05-18 20:02:26,791 INFO basehttp "GET /posts/ HTTP/1.1" 200 15467
+2022-05-18 20:02:28,176 INFO basehttp "GET /posts/ HTTP/1.1" 200 15467
+2022-05-18 20:02:28,832 INFO basehttp "GET /posts/ HTTP/1.1" 200 15467
+2022-05-18 20:02:29,457 INFO basehttp "GET /posts/ HTTP/1.1" 200 15467
+2022-05-18 20:02:34,240 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6636
+2022-05-18 20:02:35,845 INFO basehttp "GET /about/ HTTP/1.1" 200 5020
+2022-05-18 20:02:36,561 INFO basehttp "GET /authors/ HTTP/1.1" 200 6049
+2022-05-18 20:02:37,175 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6636
+2022-05-18 20:02:37,877 INFO basehttp "GET /posts/ HTTP/1.1" 200 15467
+2022-05-18 20:02:39,330 INFO basehttp "GET / HTTP/1.1" 200 5296
+2022-05-18 20:02:40,004 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6636
+2022-05-18 20:02:40,820 INFO basehttp "GET / HTTP/1.1" 200 5296
+2022-05-18 20:02:46,943 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-18 20:02:47,758 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:02:48,074 INFO basehttp "GET / HTTP/1.1" 200 5296
+2022-05-18 20:02:49,501 INFO basehttp "GET /posts/ HTTP/1.1" 200 56269
+2022-05-18 20:02:50,632 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6636
+2022-05-18 20:02:51,744 INFO basehttp "GET /authors/ HTTP/1.1" 200 6049
+2022-05-18 20:02:52,597 INFO basehttp "GET /about/ HTTP/1.1" 200 5020
+2022-05-18 20:02:53,003 INFO basehttp "GET /authors/ HTTP/1.1" 200 6049
+2022-05-18 20:02:53,886 INFO basehttp "GET /posts/ HTTP/1.1" 200 56269
+2022-05-18 20:02:54,812 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6636
+2022-05-18 20:02:55,654 INFO basehttp "GET /authors/ HTTP/1.1" 200 6049
+2022-05-18 20:02:56,112 INFO basehttp "GET /about/ HTTP/1.1" 200 5020
+2022-05-18 20:02:56,876 INFO basehttp "GET /posts/ HTTP/1.1" 200 56269
+2022-05-18 20:02:59,876 INFO basehttp "GET /posts/ HTTP/1.1" 200 56269
+2022-05-18 20:03:00,341 INFO basehttp "GET /posts/ HTTP/1.1" 200 56269
+2022-05-18 20:03:00,771 INFO basehttp "GET /posts/ HTTP/1.1" 200 56269
+2022-05-18 20:03:01,198 INFO basehttp "GET /posts/ HTTP/1.1" 200 56269
+2022-05-18 20:04:12,267 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-18 20:04:13,080 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:04:13,783 INFO basehttp "GET /posts/ HTTP/1.1" 200 65822
+2022-05-18 20:04:38,408 WARNING base Method Not Allowed (POST): /posts/
+2022-05-18 20:04:38,408 WARNING log Method Not Allowed: /posts/
+2022-05-18 20:04:38,409 WARNING basehttp "POST /posts/ HTTP/1.1" 405 0
+2022-05-18 20:06:11,945 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-18 20:06:12,710 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:06:21,492 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-18 20:06:22,305 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:06:24,071 INFO basehttp "GET / HTTP/1.1" 200 5296
+2022-05-18 20:06:27,104 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6636
+2022-05-18 20:06:27,997 INFO basehttp "GET /posts/ HTTP/1.1" 200 65822
+2022-05-18 20:06:29,322 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 6636
+2022-05-18 20:06:29,944 INFO basehttp "GET /posts/ HTTP/1.1" 200 65822
+2022-05-18 20:06:42,766 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:06:42,781 INFO basehttp "GET / HTTP/1.1" 200 5306
+2022-05-18 20:08:59,129 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-18 20:08:59,832 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:09:30,533 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-18 20:09:31,299 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:09:32,944 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:09:55,496 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:09:55,536 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:10:00,942 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:10:00,977 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:12:15,568 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-18 20:12:16,396 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:12:16,693 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:12:20,331 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:12:21,098 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:12:21,613 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:12:24,740 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:12:25,712 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:12:26,769 INFO basehttp "GET /authors/ HTTP/1.1" 200 6059
+2022-05-18 20:12:27,886 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:12:28,901 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:12:30,006 INFO basehttp "GET / HTTP/1.1" 200 5306
+2022-05-18 20:12:31,050 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:17:39,305 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-18 20:17:40,039 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:17:43,196 INFO basehttp "GET / HTTP/1.1" 200 5306
+2022-05-18 20:17:44,352 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:17:45,493 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:17:46,540 INFO basehttp "GET /authors/ HTTP/1.1" 200 6059
+2022-05-18 20:17:47,623 INFO basehttp "GET /about/ HTTP/1.1" 200 5030
+2022-05-18 20:17:48,582 INFO basehttp "GET /contacts/ HTTP/1.1" 200 5009
+2022-05-18 20:17:49,887 INFO basehttp "GET /posts/search/ HTTP/1.1" 200 82003
+2022-05-18 20:17:50,800 INFO basehttp "GET /contacts/ HTTP/1.1" 200 5009
+2022-05-18 20:17:51,498 INFO basehttp "GET /about/ HTTP/1.1" 200 5030
+2022-05-18 20:17:52,076 INFO basehttp "GET /authors/ HTTP/1.1" 200 6059
+2022-05-18 20:17:52,703 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:17:53,299 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:19:21,192 INFO basehttp "GET /contacts/ HTTP/1.1" 200 5009
+2022-05-18 20:19:22,676 INFO basehttp "GET /posts/search/ HTTP/1.1" 200 82003
+2022-05-18 20:19:28,650 INFO basehttp "GET /about/ HTTP/1.1" 200 5030
+2022-05-18 20:19:30,255 INFO basehttp "GET /authors/ HTTP/1.1" 200 6059
+2022-05-18 20:19:31,254 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:19:33,426 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:19:34,320 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:19:34,907 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:19:35,454 INFO basehttp "GET /authors/ HTTP/1.1" 200 6059
+2022-05-18 20:19:41,063 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:22:00,648 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-18 20:22:01,430 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:22:01,883 INFO basehttp "GET /authors/ HTTP/1.1" 200 6059
+2022-05-18 20:22:03,227 INFO basehttp "GET /authors/ HTTP/1.1" 200 6059
+2022-05-18 20:22:04,273 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:22:05,023 INFO basehttp "GET /authors/ HTTP/1.1" 200 6059
+2022-05-18 20:22:08,129 INFO basehttp "GET / HTTP/1.1" 200 55685
+2022-05-18 20:22:12,232 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:22:13,118 INFO basehttp "GET / HTTP/1.1" 200 55685
+2022-05-18 20:22:13,840 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:22:14,917 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:22:16,370 INFO basehttp "GET /authors/ HTTP/1.1" 200 6059
+2022-05-18 20:23:26,056 INFO autoreload C:\PythonProjects\NewsPaper\project\sign\views.py changed, reloading.
+2022-05-18 20:23:26,868 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:23:27,353 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:23:28,165 INFO basehttp "GET /authors/ HTTP/1.1" 200 6059
+2022-05-18 20:23:28,712 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:23:29,290 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:23:29,947 INFO basehttp "GET / HTTP/1.1" 200 55685
+2022-05-18 20:23:31,100 INFO basehttp "GET /sign/logout/ HTTP/1.1" 302 0
+2022-05-18 20:23:31,103 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-18 20:23:31,124 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6485
+2022-05-18 20:26:55,982 INFO autoreload C:\PythonProjects\NewsPaper\project\authors\views.py changed, reloading.
+2022-05-18 20:26:56,716 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:26:58,123 INFO basehttp "GET /authors/ HTTP/1.1" 200 56427
+2022-05-18 20:26:59,420 INFO basehttp "GET /about/ HTTP/1.1" 200 5019
+2022-05-18 20:27:00,185 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57000
+2022-05-18 20:27:00,810 INFO basehttp "GET /posts/ HTTP/1.1" 200 65821
+2022-05-18 20:27:01,854 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-18 20:27:01,875 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6485
+2022-05-18 20:27:03,888 INFO basehttp "GET /posts/ HTTP/1.1" 200 65821
+2022-05-18 20:27:05,966 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-18 20:27:05,986 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6485
+2022-05-18 20:27:07,406 INFO basehttp "GET /posts/ HTTP/1.1" 200 65821
+2022-05-18 20:27:08,615 INFO basehttp "GET /posts/add/ HTTP/1.1" 302 0
+2022-05-18 20:27:08,633 INFO basehttp "GET /accounts/login/?next=/posts/add/ HTTP/1.1" 200 6523
+2022-05-18 20:27:10,696 INFO basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+2022-05-18 20:27:10,726 INFO basehttp "GET /posts/add/ HTTP/1.1" 200 56786
+2022-05-18 20:27:15,180 INFO basehttp "GET /posts/ HTTP/1.1" 200 65822
+2022-05-18 20:27:23,925 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:27:23,962 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:27:25,369 INFO basehttp "GET /authors/ HTTP/1.1" 200 56438
+2022-05-18 20:27:31,101 INFO basehttp "GET /authors/ HTTP/1.1" 200 56438
+2022-05-18 20:27:34,353 INFO basehttp "GET /about/ HTTP/1.1" 200 5030
+2022-05-18 20:27:36,605 INFO basehttp "GET /about/ HTTP/1.1" 200 5030
+2022-05-18 20:27:37,129 INFO basehttp "GET /contacts/ HTTP/1.1" 200 5009
+2022-05-18 20:27:38,292 INFO basehttp "GET /posts/search/ HTTP/1.1" 200 82003
+2022-05-18 20:27:39,370 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:27:39,941 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:27:40,666 INFO basehttp "GET / HTTP/1.1" 200 55685
+2022-05-18 20:27:41,545 INFO basehttp "GET /posts/ HTTP/1.1" 200 65832
+2022-05-18 20:27:42,029 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57011
+2022-05-18 20:27:42,501 INFO basehttp "GET /authors/ HTTP/1.1" 200 56438
+2022-05-18 20:27:43,177 INFO basehttp "GET /about/ HTTP/1.1" 200 5030
+2022-05-18 20:27:44,316 INFO basehttp "GET /authors/ HTTP/1.1" 200 56438
+2022-05-18 20:27:49,764 INFO basehttp "GET /about/ HTTP/1.1" 200 5030
+2022-05-18 20:28:03,102 INFO basehttp "GET / HTTP/1.1" 200 55685
+2022-05-18 20:31:05,850 INFO basehttp "GET /authors/ HTTP/1.1" 200 56522
+2022-05-18 20:31:06,615 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57095
+2022-05-18 20:31:07,428 INFO basehttp "GET /posts/ HTTP/1.1" 200 65916
+2022-05-18 20:32:44,690 INFO basehttp "GET /contacts/ HTTP/1.1" 200 5093
+2022-05-18 20:32:45,665 INFO basehttp "GET /about/ HTTP/1.1" 200 5114
+2022-05-18 20:32:46,499 INFO basehttp "GET /authors/ HTTP/1.1" 200 56522
+2022-05-18 20:32:47,385 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57095
+2022-05-18 20:32:48,117 INFO basehttp "GET /posts/ HTTP/1.1" 200 65916
+2022-05-18 20:32:48,872 INFO basehttp "GET / HTTP/1.1" 200 55769
+2022-05-18 20:34:36,367 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57048
+2022-05-18 20:34:37,617 INFO basehttp "GET /posts/ HTTP/1.1" 200 65869
+2022-05-18 20:34:38,507 INFO basehttp "GET / HTTP/1.1" 200 55722
+2022-05-18 20:34:39,583 INFO basehttp "GET /authors/ HTTP/1.1" 200 56475
+2022-05-18 20:34:40,352 INFO basehttp "GET /about/ HTTP/1.1" 200 5067
+2022-05-18 20:34:41,585 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57048
+2022-05-18 20:34:45,244 INFO basehttp "POST /posts/categorys/ HTTP/1.1" 302 0
+2022-05-18 20:34:45,260 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57050
+2022-05-18 20:34:50,137 INFO basehttp "POST /posts/categorys/ HTTP/1.1" 302 0
+2022-05-18 20:34:50,156 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57054
+2022-05-18 20:34:58,027 INFO basehttp "POST /posts/categorys/ HTTP/1.1" 302 0
+2022-05-18 20:34:58,046 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57047
+2022-05-18 20:37:37,009 INFO basehttp "GET / HTTP/1.1" 200 55760
+2022-05-18 20:37:37,993 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:38,665 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57086
+2022-05-18 20:37:39,892 INFO basehttp "GET /authors/ HTTP/1.1" 200 56513
+2022-05-18 20:37:40,479 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57086
+2022-05-18 20:37:41,125 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:42,802 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:43,059 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:43,350 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:43,626 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:43,904 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:44,166 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:44,438 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:44,720 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:44,986 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:45,316 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:37:45,583 INFO basehttp "GET /posts/ HTTP/1.1" 200 65901
+2022-05-18 20:38:21,285 INFO basehttp "GET /posts/ HTTP/1.1" 200 65921
+2022-05-18 20:38:22,035 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57106
+2022-05-18 20:38:22,644 INFO basehttp "GET /authors/ HTTP/1.1" 200 56533
+2022-05-18 20:38:23,347 INFO basehttp "GET /posts/ HTTP/1.1" 200 65921
+2022-05-18 20:38:25,685 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57106
+2022-05-18 20:38:37,452 INFO basehttp "POST /posts/categorys/ HTTP/1.1" 302 0
+2022-05-18 20:38:37,468 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57107
+2022-05-18 20:39:18,826 INFO basehttp "GET /posts/ HTTP/1.1" 200 65915
+2022-05-18 20:39:19,436 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57094
+2022-05-18 20:39:20,108 INFO basehttp "GET / HTTP/1.1" 200 55768
+2022-05-18 20:39:20,748 INFO basehttp "GET /posts/ HTTP/1.1" 200 65915
+2022-05-18 20:39:30,547 INFO basehttp "GET /authors/ HTTP/1.1" 200 56538
+2022-05-18 20:39:31,828 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57111
+2022-05-18 20:39:32,766 INFO basehttp "GET /posts/ HTTP/1.1" 200 65932
+2022-05-18 20:39:34,563 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57111
+2022-05-18 20:39:35,276 INFO basehttp "GET /posts/ HTTP/1.1" 200 65932
+2022-05-18 20:39:40,477 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:39:40,516 INFO basehttp "GET /posts/ HTTP/1.1" 200 65930
+2022-05-18 20:39:58,116 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:39:58,155 INFO basehttp "GET /posts/ HTTP/1.1" 200 65936
+2022-05-18 20:40:02,530 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:40:02,569 INFO basehttp "GET /posts/ HTTP/1.1" 200 65925
+2022-05-18 20:40:07,183 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:40:07,225 INFO basehttp "GET /posts/ HTTP/1.1" 200 65933
+2022-05-18 20:40:11,890 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:40:11,928 INFO basehttp "GET /posts/ HTTP/1.1" 200 65929
+2022-05-18 20:40:39,512 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57108
+2022-05-18 20:40:40,137 INFO basehttp "GET /authors/ HTTP/1.1" 200 56535
+2022-05-18 20:40:40,574 INFO basehttp "GET /about/ HTTP/1.1" 200 5127
+2022-05-18 20:40:41,340 INFO basehttp "GET /posts/ HTTP/1.1" 200 65929
+2022-05-18 20:40:43,812 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:40:43,848 INFO basehttp "GET /posts/ HTTP/1.1" 200 65931
+2022-05-18 20:40:45,956 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:40:45,996 INFO basehttp "GET /posts/ HTTP/1.1" 200 65926
+2022-05-18 20:40:49,535 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:40:49,574 INFO basehttp "GET /posts/ HTTP/1.1" 200 65925
+2022-05-18 20:41:15,762 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-18 20:41:16,512 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:41:18,653 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57106
+2022-05-18 20:41:19,637 INFO basehttp "GET /authors/ HTTP/1.1" 200 56533
+2022-05-18 20:41:20,528 INFO basehttp "GET /posts/ HTTP/1.1" 200 65927
+2022-05-18 20:41:37,506 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:41:37,545 INFO basehttp "GET /posts/ HTTP/1.1" 200 65930
+2022-05-18 20:41:54,992 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:41:55,035 INFO basehttp "GET /posts/ HTTP/1.1" 200 65929
+2022-05-18 20:42:16,741 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-18 20:42:17,600 INFO autoreload Watching for file changes with StatReloader
+2022-05-18 20:42:34,836 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57111
+2022-05-18 20:42:35,682 INFO basehttp "GET /posts/ HTTP/1.1" 200 65932
+2022-05-18 20:42:36,294 INFO basehttp "GET / HTTP/1.1" 200 55785
+2022-05-18 20:42:36,900 INFO basehttp "GET /posts/ HTTP/1.1" 200 65932
+2022-05-18 20:42:53,783 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
+2022-05-18 20:42:53,828 INFO basehttp "GET /posts/ HTTP/1.1" 200 65932

@@ -4,15 +4,17 @@ from .filters import PostFilter
 from .forms import PostForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import PermissionRequiredMixin
-from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .tasks import new_post_sub_email
 from django.core.cache import cache
+from django.shortcuts import redirect
+import pytz
+from django.utils import timezone
 from datetime import datetime, timedelta
+from django.http.response import HttpResponse
 from django.template.loader import render_to_string  # импортируем функцию, которая срендерит наш html в текст
 from django.core.mail import EmailMultiAlternatives
-from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.shortcuts import render
 from django.core.paginator import Paginator
@@ -28,9 +30,13 @@ class CategorysList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['time_now'] = datetime.now()
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
 
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)
 
 class CategoryDetailView(DetailView):
     model = Category
@@ -40,8 +46,13 @@ class CategoryDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['time_now'] = datetime.now()
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)
 
 
 @login_required
@@ -70,11 +81,16 @@ class PostsList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['time_now'] = datetime.now()
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         context['filter'] = PostFilter(self.request.GET, queryset=self.get_queryset())
         context['value1'] = None
         context['form'] = PostForm()
         return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)
 
 
 class PostSearch(ListView):
@@ -86,9 +102,14 @@ class PostSearch(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['time_now'] = datetime.now()  # добавим переменную текущей даты time_now
         context['filter'] = PostFilter(self.request.GET, queryset=self.get_queryset())
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)
 
 
 class PostDetailView(DetailView):
@@ -98,7 +119,13 @@ class PostDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['post_time_creation'] = self.object.dateCreation.strftime("%d-%B-%Y %H:%M")
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)
 
     def get_object(self, *args, **kwargs):  # переопределяем метод получения объекта, как ни странно
         obj = cache.get(f'Post-{self.kwargs["pk"]}',
@@ -115,8 +142,16 @@ class PostCreateView(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
     form_class = PostForm
     permission_required = ('news.add_post')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
+        return context
+
+
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
+        request.session['django_timezone'] = request.POST['timezone']
         if form.is_valid():
             form.save()
             sub_categoryname = Category(request.POST['postCategory'])
@@ -129,6 +164,16 @@ class PostUpdateView(PermissionRequiredMixin, LoginRequiredMixin, UpdateView):
     form_class = PostForm
     permission_required = ('news.change_post')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
+        return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)
+
     def get_object(self, **kwargs):
         id = self.kwargs.get('pk')
         return Post.objects.get(pk=id)
@@ -139,3 +184,13 @@ class PostDeleteView(PermissionRequiredMixin, LoginRequiredMixin, DeleteView):
     queryset = Post.objects.all()
     success_url = '/posts/'
     permission_required = ('news.delete_post')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
+        return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect(request.path)

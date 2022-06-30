@@ -1481,3 +1481,126 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [TIME_ZONE] in 
 2022-05-18 20:42:36,900 INFO basehttp "GET /posts/ HTTP/1.1" 200 65932
 2022-05-18 20:42:53,783 INFO basehttp "POST /posts/ HTTP/1.1" 302 0
 2022-05-18 20:42:53,828 INFO basehttp "GET /posts/ HTTP/1.1" 200 65932
+2022-05-24 19:52:10,245 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:52:23,387 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 19:52:24,090 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:52:35,075 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 19:52:35,794 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:53:10,813 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:53:21,784 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 19:53:22,534 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:53:41,911 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 19:53:42,630 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:54:57,577 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 19:55:00,827 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:56:41,592 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:56:54,687 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 19:56:55,422 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:57:34,677 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-24 19:57:35,395 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:58:12,602 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-24 19:58:13,352 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 19:59:42,974 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-24 19:59:43,787 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:01:26,039 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:01:26,930 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:02:53,523 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:02:54,257 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:04:59,448 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:06:18,858 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:06:19,592 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:06:26,407 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:06:27,110 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:08:43,130 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-24 20:08:43,849 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:09:15,776 INFO autoreload C:\PythonProjects\NewsPaper\project\news\views.py changed, reloading.
+2022-05-24 20:09:16,682 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:10:08,565 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:10:09,283 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:10:33,880 INFO autoreload C:\PythonProjects\NewsPaper\project\news\serializers.py changed, reloading.
+2022-05-24 20:10:34,599 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:10:39,708 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-24 20:10:39,740 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6585
+2022-05-24 20:10:39,862 WARNING log Not Found: /accounts/login/assets/favicon.ico
+2022-05-24 20:10:39,862 WARNING basehttp "GET /accounts/login/assets/favicon.ico HTTP/1.1" 404 9490
+2022-05-24 20:10:42,655 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57100
+2022-05-24 20:10:42,694 WARNING log Not Found: /posts/categorys/assets/favicon.ico
+2022-05-24 20:10:42,694 WARNING basehttp "GET /posts/categorys/assets/favicon.ico HTTP/1.1" 404 7782
+2022-05-24 20:10:43,744 INFO basehttp "GET /posts/ HTTP/1.1" 200 65921
+2022-05-24 20:10:43,795 WARNING log Not Found: /posts/assets/favicon.ico
+2022-05-24 20:10:43,795 WARNING basehttp "GET /posts/assets/favicon.ico HTTP/1.1" 404 7752
+2022-05-24 20:10:51,672 INFO basehttp "GET /authors/ HTTP/1.1" 200 56527
+2022-05-24 20:10:51,721 WARNING log Not Found: /authors/assets/favicon.ico
+2022-05-24 20:10:51,722 WARNING basehttp "GET /authors/assets/favicon.ico HTTP/1.1" 404 6769
+2022-05-24 20:11:25,504 INFO basehttp "GET /schools HTTP/1.1" 301 0
+2022-05-24 20:11:25,536 INFO basehttp "GET /schools/ HTTP/1.1" 200 11985
+2022-05-24 20:11:25,587 INFO basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+2022-05-24 20:11:25,589 INFO basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+2022-05-24 20:11:25,592 INFO basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+2022-05-24 20:11:25,595 INFO basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2022-05-24 20:11:25,599 INFO basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+2022-05-24 20:11:25,620 INFO basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2022-05-24 20:11:25,631 INFO basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2022-05-24 20:11:25,632 INFO basehttp "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 200 89476
+2022-05-24 20:11:25,634 INFO basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+2022-05-24 20:11:25,634 INFO basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2022-05-24 20:11:25,639 INFO basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2022-05-24 20:11:25,720 WARNING log Not Found: /favicon.ico
+2022-05-24 20:11:25,720 WARNING basehttp "GET /favicon.ico HTTP/1.1" 404 5924
+2022-05-24 20:12:01,205 INFO basehttp "GET /posts/ HTTP/1.1" 200 65921
+2022-05-24 20:12:10,831 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:12:11,721 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:12:12,128 INFO basehttp "GET /posts/ HTTP/1.1" 200 65921
+2022-05-24 20:12:12,581 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57100
+2022-05-24 20:12:13,456 INFO basehttp "GET /posts/ HTTP/1.1" 200 65921
+2022-05-24 20:12:15,112 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57100
+2022-05-24 20:12:15,798 INFO basehttp "GET /posts/ HTTP/1.1" 200 65921
+2022-05-24 20:12:25,116 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:12:25,872 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:12:27,565 INFO basehttp "GET /postss/ HTTP/1.1" 200 11976
+2022-05-24 20:12:55,206 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:12:56,034 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:12:56,347 INFO basehttp "GET /posts/categorys/ HTTP/1.1" 200 57100
+2022-05-24 20:13:05,144 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:13:05,939 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:13:06,376 INFO basehttp "GET /authors/ HTTP/1.1" 200 56527
+2022-05-24 20:13:07,995 INFO basehttp "GET /about/ HTTP/1.1" 200 5119
+2022-05-24 20:13:08,021 WARNING log Not Found: /about/assets/favicon.ico
+2022-05-24 20:13:08,021 WARNING basehttp "GET /about/assets/favicon.ico HTTP/1.1" 404 5971
+2022-05-24 20:13:08,524 INFO basehttp "GET /authors/ HTTP/1.1" 200 56527
+2022-05-24 20:13:22,493 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:13:23,321 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:16:17,763 INFO autoreload C:\PythonProjects\NewsPaper\project\project\views.py changed, reloading.
+2022-05-24 20:16:18,567 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:17:08,498 INFO autoreload C:\PythonProjects\NewsPaper\project\project\views.py changed, reloading.
+2022-05-24 20:17:09,341 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:17:58,451 INFO autoreload C:\PythonProjects\NewsPaper\project\project\views.py changed, reloading.
+2022-05-24 20:17:59,248 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:19:31,433 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-24 20:19:32,230 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:21:17,091 INFO autoreload C:\PythonProjects\NewsPaper\project\project\settings.py changed, reloading.
+2022-05-24 20:21:17,841 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:24:06,476 INFO autoreload C:\PythonProjects\NewsPaper\project\project\urls.py changed, reloading.
+2022-05-24 20:24:07,179 INFO autoreload Watching for file changes with StatReloader
+2022-05-24 20:24:39,763 INFO basehttp "GET /news HTTP/1.1" 301 0
+2022-05-24 20:24:39,791 WARNING log Forbidden: /news/
+2022-05-24 20:24:39,792 WARNING basehttp "GET /news/ HTTP/1.1" 403 5076
+2022-05-24 20:24:39,807 INFO basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2022-05-24 20:24:39,811 INFO basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2022-05-24 20:24:39,813 INFO basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2022-05-24 20:24:39,817 INFO basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2022-05-24 20:24:39,818 INFO basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2022-05-24 20:24:39,821 INFO basehttp "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+2022-05-24 20:24:39,821 INFO basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2022-05-24 20:24:39,822 INFO basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2022-05-24 20:24:39,822 INFO basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2022-05-24 20:24:39,823 INFO basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2022-05-24 20:24:39,831 INFO basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2022-05-24 20:24:56,992 INFO basehttp "GET / HTTP/1.1" 302 0
+2022-05-24 20:24:57,019 INFO basehttp "GET /accounts/login/?next=/ HTTP/1.1" 200 6585
+2022-05-24 20:24:58,910 INFO basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+2022-05-24 20:24:58,961 INFO basehttp "GET / HTTP/1.1" 200 55775
+2022-05-24 20:24:59,002 WARNING log Not Found: /assets/favicon.ico
+2022-05-24 20:24:59,003 WARNING basehttp "GET /assets/favicon.ico HTTP/1.1" 404 5945
+2022-05-24 20:25:01,956 INFO basehttp "GET /posts/ HTTP/1.1" 200 65922
+2022-05-24 20:25:05,344 INFO basehttp "GET /news/ HTTP/1.1" 200 10919
